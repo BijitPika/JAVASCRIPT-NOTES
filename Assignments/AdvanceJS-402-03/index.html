@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <script src="./index.js"></script>
+    <style>
+       ul{
+        font-weight: bold;
+        color: white;
+        font-style: italic;
+    }
+      body{
+        background-color: darkslategrey;
+      }
+      h1{
+        color: white;
+      }
+      button{
+        margin-right: 50px;
+        font-style: italic;
+      }
+    </style>
+</head>
+<body>
+    <h1>My Shopping List</h1>
+    
+    <hr>
+    <br>
+    <input type="text" id="txtval">
+    <button onclick="add()">Add item</button>
+    <ul id="lists">
+    </ul>
+</body>
+</html>

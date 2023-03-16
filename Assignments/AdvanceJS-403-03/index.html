@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="container">
+        
+        <div class="innercon">
+            <div class="header"><h1 style="text-align: center;">Bijit's Tip Calculator</h1></div>
+            <div class="billAmount">
+                <h3>How Much was your bill?</h3>
+                <label for="input">$<input type="number" name="" id="bill"></label>
+            </div>
+            <div class="service">
+                <p>How was our Service?</p>
+                <select name="seletion" id="seletion" onchange="hello2()">
+                    <option value="none" >--Choose an Option--</option>
+                    <option value="30">30% - Outstanding</option>
+                    <option value="20">20% - Good</option>
+                    <option value="15">15% - It was Okay</option>
+                    <option value="10">10% - Bad</option>
+                    <option value="5">5% - Terrible</option>
+                </select>
+            </div>
+            <div class="service">
+                <p>How many people are Sharing the bill?</p>
+                <label for="input"><input type="number" name="" id="people">People</label>
+            </div>
+            <div class="service"><Button onclick="hello()">Calculate</Button></div>
+            <div id="service" class="srv">
+                <div><h2>Tip Amount</h2> <div style="text-align: center;">:5$</div></div>
+               
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let value11="";
+        function hello2(){
+
+            let e=document.getElementById('seletion');
+            let text = e.options[e.selectedIndex].text; 
+            value11 = e.value;
+        }
+        function hello(){
+            console.log(value11); 
+            let amt=document.getElementById('bill').value;
+            let ppl=document.getElementById('people').value;
+            const total=(amt*value11/100)/ppl
+            console.log(total);
+            document.getElementById('service').innerHTML=`<div><h2>Tip Amount <div>:${total}$</div></div></h2>`
+          
+      }
+
+    </script>
+    
+</body>
+</html>

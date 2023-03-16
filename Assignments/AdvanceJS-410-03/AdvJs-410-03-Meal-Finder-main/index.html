@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"><h1>Meal Finder</h1></div>
+    <div class="sub">Find the perfect meal to dine Upon..</div>
+    <div class="inputs">
+        <input type="text" id="search">
+        <button  onclick="getData()">Search</button>
+    </div>
+
+    <div id="data">
+    </div>
+       <script>
+       
+       
+       
+      async function getData(){
+
+let dataEle=document.getElementById('data')
+let searchInput=document.getElementById('search')
+console.log(searchInput.value);
+
+    
+   if(searchInput.value!=""){
+    let res=await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput.value}`)
+    let data= await res.json();
+    console.log(data);
+    dataEle.innerHTML="";
+    data.meals.map((e)=>{ 
+        dataEle.innerHTML+=`
+        <img src="${e.strMealThumb}" alt="" height="250px" width="250px">
+        `
+    })
+   }
+   else{
+    alert('Field Empty !')
+   }
+    
+}
+
+
+       </script>
+</body>
+</html>

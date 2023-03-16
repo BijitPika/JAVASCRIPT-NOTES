@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		Dynamic Image Create
+	</title>	
+</head>
+
+<body id = "body" style = "text-align:center;">
+	
+	<h1 style = "color:green;" >
+		Geekster
+	</h1>
+	
+	<p id = "imgUp" style =
+			"font-size: 15px; font-weight: bold;">
+	</p>
+	
+	<button onclick = "GFG_Fun()">
+		Click Here
+	</button>
+	
+	<p id = "imgDown" style =
+			"color:green; font-size: 20px; font-weight: bold;">
+	</p>
+	
+	<script>
+		var up = document.getElementById("imgUp");
+		up.innerHTML = "Click on the button to add image element";
+		var down = document.getElementById('imgDown');
+		
+		function GFG_Fun() {
+			var img = document.createElement('img');
+			img.src = "./geekster.png";
+
+			document.getElementById('body').appendChild(img);
+			down.innerHTML = "Image Element Added";
+		}
+	</script>
+</body>
+
+</html>

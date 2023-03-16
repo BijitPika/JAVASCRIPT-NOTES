@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        button{
+            color: white;
+            background-color: black;
+        }
+    </style>
+  </head>
+  <body>
+    <img
+    src="https://source.unsplash.com/featured?technology"
+      alt="image"
+      width="600px"
+      height="500px"
+      id="slider-img"
+    />
+    <button onclick="nextImg()">Next Image</button>
+    <button onclick="prevImg()">Prev Image</button>
+
+    <script>
+        var img=[];
+        img[0]="https://source.unsplash.com";
+        img[1]="https://source.unsplash.com";
+        img[2]="https://source.unsplash.com";
+        i=0;
+        let image = document.getElementById("slider-img");
+
+      function nextImg() {
+        if(i<img.length-1)
+        i++;
+        else
+        i=0;
+        image.src=img[i];
+      }
+
+
+      function prevImg(){
+        i--;
+        if(i==-1)
+        i=2;
+        image.src=img[i];
+      }
+
+    </script>
+  </body>
+</html>

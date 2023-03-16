@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emojee - An Emoji Search Application</title>
+    <style>
+        *{
+        margin: 0;padding: 0;
+        background-color: rgb(40, 39, 39);
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        #table{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(41, 40, 40);
+            color: aliceblue;
+            margin: 20px;
+        }
+       td{
+        border-bottom: 1px solid black;
+        margin: 40px;
+        height: 40px;
+       }
+       .container{
+        height: 20vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        color: aliceblue;
+
+       }
+       #bar{
+        
+        background-color: aliceblue;
+        height: 30%;
+        width: 20%;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+       }
+       button{
+        background-color: white;
+        height: 30%;
+        width: 100px;
+        font-weight:bolder ;
+        border: none;
+        border-radius:10px;
+        font-size: 1.17rem;
+        margin-left: 10px;
+        margin-top: 5px;
+       }
+       button:hover{
+        color: white;
+        background-color: black;
+       }
+       #tdm{
+        margin-left:10vw;
+        background-color: rgb(41, 40, 40);
+       }
+       input{
+        border-radius: 20px;
+        margin-top: 5px;
+       }
+       h1{
+        margin-left: 10px;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emojee - Emoji Search Application</h1>
+        
+
+        <input type="search" name="search" id="bar" placeholder="Ex: happy" onkeyup="hello2()">
+        <button onclick="getData()">Search</button>
+        
+    </div>
+    <table id="table">
+      
+    </table>
+
+    <script src="datalist.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

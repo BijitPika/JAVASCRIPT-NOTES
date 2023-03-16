@@ -1,0 +1,12 @@
+{
+    "name":"Bijit",
+    "age":25,
+    "isStudent":true,
+    "passport":null,
+    "pLang":["python","java","js"],
+    "address":{
+        "city":"dhubri",
+        "state":"assam",
+        "pin":783342
+    }
+}

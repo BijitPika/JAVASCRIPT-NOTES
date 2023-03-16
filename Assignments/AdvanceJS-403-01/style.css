@@ -1,0 +1,35 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.one{
+    font-size: 50px;
+}
+#card{
+    height: 30%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+   
+    border-radius: 10px;
+}
+h2{
+    color: green;
+    font-size: 50px;
+}
+.two{
+    font-weight: bolder;
+    color:green;
+    font-size: 50px;
+}

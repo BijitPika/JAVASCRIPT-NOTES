@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            color:green
+            
+        }
+    </style>
+</head>
+<body>
+    <label for=""  >Name</label>
+    <input id="name" type="text">
+    <label for="" >PH</label>
+    <input id="ph" type="number">
+    <label for=""  >Email</label>
+    <input id="email"type="email">
+    <label for=""  >Age</label>
+    <input id="age" type="number"><br>
+    <button id="btn" onclick="func()">Submit</button>
+</body>
+<script>
+    // function func(){
+    //     var div=document.getElementById("div")
+    //     div.setAttribute("style","border:1px solid black")
+    //     div.setAttribute("style","backgrond-color:black")
+        
+    //     div.classList.add("div")
+    //     div.innerText="Hello" 
+    //     var body=document.getElementsByTagName("body")[0]
+    //     body.setAttribute("style","background-color:red")
+    //     var body=document.getElementsByTagName("body")[1]
+    //     body.setAttribute("style","background-color:blue")
+    // }
+
+    // const hello='{"name":"bijit","city":"dhubri"}'
+    // const hello2=JSON.parse(hello)
+    // console.log(hello2);
+    // console.log(JSON.stringify(hello));
+    // const hello4={
+    //     name:"Bijit",
+    //     age:25,
+    //     work:"cisco"
+    // }
+    // console.log(JSON.stringify(hello4));
+
+    const loginData={
+        name:"",
+        ph:"",
+        email:"",
+        age:""
+    }
+    function func(){
+        const name=document.getElementById("name").value
+        const ph=document.getElementById("ph").value
+        const email=document.getElementById("email").value
+        const age=document.getElementById("age").value
+        console.log(name,ph,email,age);
+        loginData.name=name
+        loginData.ph=ph
+        loginData.email=email
+        loginData.age=age
+        console.log(loginData);
+        alert(JSON.parse(loginData))
+    }
+
+ 
+
+    
+
+    
+
+   
+    
+</script>
+</html>
